@@ -4,6 +4,7 @@ import 'package:fluttergram/screen/profile/profile_view.dart';
 import 'package:fluttergram/ui_shared/images.dart';
 import 'package:fluttergram/ui_shared/constants.dart';
 import 'package:fluttergram/ui_shared/size_config.dart';
+import 'package:fluttergram/screen/chats/chats_view.dart';
 
 enum MenuState { home, favourite, message, profile }
 
@@ -33,7 +34,7 @@ class BottomNavBar extends StatelessWidget {
         ],
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
+          topRight:Radius.circular(40),
         ),
       ),
       child: SafeArea(
@@ -89,7 +90,7 @@ class BottomNavBar extends StatelessWidget {
                     ? primaryColor
                     : inActiveIconColor,
               ),
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, ChatsScreen.route),
             ),
             IconButton(
               icon: ImageFactory.svg(
